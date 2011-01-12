@@ -76,7 +76,7 @@ Der Datensatz \emph{iris} l\"asst sich am einfachsten lernen, da man hier besond
 \begin{tabular}{c|c}
 				Datensatz         & Validierungsmenge    \\ \hline
 				\emph{glass}      & 73.1     \\ \hline
-				\emph{iris}       & 93.\bar3     \\ \hline
+				\emph{iris}       & 93.3     \\ \hline
 				\emph{audiology}  & 67.3   \\ \hline
 				\emph{ionosphere} & 84.6   \\ \hline
 				\emph{yeast}      & 56.1 \\ \hline
@@ -94,11 +94,33 @@ Datensatz: glass
 \begin{tabular}{c|c|c|c|c}
 				Regellerner       & \emph{build wind float} & \emph{containers} & \emph{tableware}  \\ \hline
 				\emph{J48}			& 0.81 & 0.87 & 0.93  \\ \hline
-				\emph{Naive Bayes}  & 0.71 & 0.84 & 0.98 & 
+				\emph{Naive Bayes}  & 0.71 & 0.84 & 0.98  
 \end{tabular}
 
 
 % section aufgabe_3_ROC_kurven (end)
+\section{Aufgabe 4 Entscheidungsb\"aume}
+\label{sec:aufgabe_4_entscheidungsbaume}
+
+Datensatz: contact lenses
+
+Area under ROC curve
+
+\begin{tabular}{c|c|c|c}
+				Regellerner       & \emph{soft} & \emph{hard} & \emph{none}  \\ \hline
+				\emph{J48 - unpruned} &  &  &   \\ \hline
+				\emph{J48 - pruned}  &  &  &  \\ \hline
+				\emph{ID3}  &  &  &  \\ \hline
+\end{tabular}
+
+Accuracy
+
+\begin{tabular}{c|c|c}
+				Regellerner       & \emph{contact lenses} & \emph{---}  \\ \hline
+				\emph{J48 - pruned} &   &   \\ \hline
+				\emph{J48 - unpruned}  & &  \\ \hline
+				\emph{ID3}  &  \\ \hline
+\end{tabular}
 
 
 \end{document}
