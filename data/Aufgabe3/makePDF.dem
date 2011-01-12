@@ -1,0 +1,21 @@
+set terminal pdf
+set key left box
+set pointsize 0.2
+
+
+set output "ROC_glass_build_wind_float.pdf";
+
+
+plot "ROC_glass_build_wind_float_J48.txt" with linespoints, "ROC_glass_build_wind_float_NB.txt"   with linespoints
+
+
+set output "ROC_glass_containers.pdf";
+
+plot "ROC_glass_containers_J48.txt"   with linespoints, "ROC_glass_containers_NB.txt"   with linespoints
+
+
+set output "ROC_glass_tableware_float.pdf";
+
+plot "ROC_glass_tableware_J48.txt"   with linespoints, "ROC_glass_tableware_NB.txt"   with linespoints
+
+
