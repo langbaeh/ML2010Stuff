@@ -102,7 +102,7 @@ Datensatz: glass
 \section{Aufgabe 4 Entscheidungsb\"aume}
 \label{sec:aufgabe_4_entscheidungsbaume}
 
-Datensatz: contact lenses
+Datensatz: contact lenses, kr-vs-kp
 
 Area under ROC curve
 
@@ -116,11 +116,71 @@ Area under ROC curve
 Accuracy
 
 \begin{tabular}{c|c|c}
-				Regellerner       & \emph{contact lenses} & \emph{---}  \\ \hline
+				Regellerner       & \emph{contact lenses} & \emph{kr-vs-kp}  \\ \hline
 				\emph{J48 - pruned} &   &   \\ \hline
 				\emph{J48 - unpruned}  & &  \\ \hline
 				\emph{ID3}  &  \\ \hline
 \end{tabular}
+
+
+
+
+%section aufgabe_4_entscheidungsbaume (end)
+
+\section{Aufgabe 5 Nearest Neighbour}
+\label{sec:aufgabe_4_nearest_neighbour}
+
+Accuracy
+
+\begin{tabular}{c|c|c}
+                k-NN       & \emph{contact lenses} & \emph{kr-vs-kp}  \\ \hline
+				\emph{k = 1} & 79.17  & 96.28  \\ \hline
+				\emph{k = 3} & 79.17  & 96.50  \\ \hline
+				\emph{k = 5} & 66.67  & 96.03  \\ \hline
+				\emph{k = 7} & 58.33  & 95.40  \\ \hline
+				\emph{k = 9} & 58.33  & 95.24  \\ \hline
+				\emph{k = 11} & 58.33  & 95.06  \\ \hline
+\end{tabular}
+
+%section aufgabe_4_nearest_neighbour (end)
+
+
+\section{Aufgabe 6 Regressionsb\"aume}
+\label{sec:aufgabe_6_regressionsbaume}
+
+
+Commandlines: 
+
+regression tree, unpruned
+java -cp WEKAPATH weka.classifiers.trees.M5P -R -N -i -t Regression/housing.arf
+
+regression tree, pruned
+java -cp WEKAPATH weka.classifiers.trees.M5P -R -i -t Regression/housing.arf
+
+model tree, pruned
+java -cp WEKAPATH weka.classifiers.trees.M5P -i -N -t Regression/housing.arf
+
+model tree, pruned
+java -cp WEKAPATH weka.classifiers.trees.M5P -i -t Regression/housing.arf
+
+Regression tree
+
+\begin{tabular}{c|c|c|c|c}
+                Datensatz  & \emph{pruned MAE } & \emph{unpruned MAE} & \emph{pruned RMSE} & \emph{unpruned RMSE}  \\ \hline
+				\emph{auto-price}  & 2096.37 & 2075.07 & 3336.37  & 3287.12 \\ \hline
+				\emph{concrete}    & 6.77 & 6.48 &8.68 & 8.33  \\ \hline
+				\emph{housing}     & 3.29 & 3.20 & 4.82 & 4.72 \\ \hline
+				\emph{stock}       & 1.19 & 1.17 & 1.60 & 1.59 \\ \hline
+				\emph{winequality} & & & & 
+\end{tabular}
+
+
+
+%section sec:aufgabe_6_regressionsbaume (end) 
+
+
+
+
 
 
 \end{document}
