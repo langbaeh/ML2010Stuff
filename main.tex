@@ -157,13 +157,12 @@ java -cp WEKAPATH weka.classifiers.trees.M5P -R -N -i -t Regression/housing.arf
 regression tree, pruned
 java -cp WEKAPATH weka.classifiers.trees.M5P -R -i -t Regression/housing.arf
 
-model tree, pruned
+model tree, unpruned
 java -cp WEKAPATH weka.classifiers.trees.M5P -i -N -t Regression/housing.arf
 
 model tree, pruned
 java -cp WEKAPATH weka.classifiers.trees.M5P -i -t Regression/housing.arf
 
-Regression tree
 \begin{table}
 \begin{tabular}{c|c|c|c|c|c|c|c|c}
                 Datensatz  & \emph{R P MAE } & \emph{R U MAE} & \emph{M P MAE} & \emph{M P MAE} & 
@@ -179,10 +178,19 @@ Regression tree
 
 
 
+java -cp WEKAPATH weka.classifiers.trees.M5P -R -N -M 1 -i -t regression.arff -T regression\_test.arff
 
+
+MAE: 0.61 
+RMSE: 0.64 
 
 %section sec:aufgabe_6_regressionsbaume (end) 
 
+\section{Aufgabe 7}
+
+commandline: 
+
+java -cp WEKAPATH weka.classifiers.Bagging -W weka.classifiers.trees.J48 -i -t contact\_lenses.arff -- -U
 
 
 
