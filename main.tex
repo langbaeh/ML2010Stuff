@@ -11,152 +11,28 @@
 
 \maketitle
 
-\section{Aufgabe 1 Regellernen} % (fold)
-\label{sec:aufgabe_1_regellernen}
-
-F\"ur diese Aufgabe benutzen wir die Datens\"atze \emph{glass, iris} und \emph{splice}.
-\emph{glass} wurde f\"ur den Prism-Learner mit dem Discretize-Filter verwendet (\emph{java weka.filters.supervised.attribute.Discretize -i glass.arff -o glass\_nom.arff -R 1,2,3,4,5,6,7,8,9 -c last}).\\
-
-Anzahl der Regeln \\
-\begin{tabular}{c|c|c|c}
-	             & glass & iris & splice \\ \hline
-Conjunctive Rule &   1   &  1   &   1    \\ \hline
-JRip             &   8   &  4   &   14   \\ \hline
-Prism	         &   63  &  16   &  3176    \\
-\end{tabular}\\ \\
-
-Gesamtanzahl der Bedingungen \\
-\begin{tabular}{c|c|c|c}
-	             & glass & iris & splice \\ \hline
-Conjunctive Rule &   2   &  1   &   1    \\ \hline
-JRip             &  18   &  3   &   55   \\ \hline
-Prism	         &  385  & 51   &   3176   \\
-\end{tabular}\\ \\
-
-Anzahl der vorhergesagten Klassen \\
-\begin{tabular}{c|c|c|c}
-	             & glass & iris & splice \\ \hline
-Conjunctive Rule &   1   &  1   &   1    \\ \hline
-JRip             &   6   &  3   &   3    \\ \hline
-Prism	         &   6   &  3   &   3    \\
-\end{tabular}\\ \\
-
-
-Eine Default Rule existiert nur bei JRip. Dort wird als Defaultklasse \"ublicherweise die Klasse gew\"ahlt, die am h\"aufigsten im Datensatz vorkommt. 
-
-Der Datensatz \emph{iris} l\"asst sich am einfachsten lernen, da man hier besonders wenig Regeln und besonders wenig Bedingungen ben\"otigt.
-
-
+\section{Aufgabe 1 Regellernen} 
+\input{a1}
 %TODO : JRip und PRISM auf contact-lenses vergleichen
 
-% section aufgabe_1_regellernen (end)
+\section{Aufgabe 2 Evaluation von Regellernern}
+\input{a2}
+%TODO : siehe a2.tex
 
-\section{Aufgabe 2 Evaluation von Regellernern} % (fold)
-\label{sec:aufgabe_2_evaluation_von_regellernern}
-
-\begin{tabular}{c|c|c|c|c|c}
-				Datensatz         & 1x5  & 1x10 & 1x20 & LOO  & Trainingsmenge   \\ \hline
-				\emph{glass}      & 67.3 & 61.8 & 60.7 & 61.7 & 85.98   \\ \hline
-				\emph{iris}       & 92.0 & 88.0 & 96.0 & 93.3 & 96.0    \\ \hline
-				\emph{audiology}  & 67.3 & 66.4 & 69.9 & 69.9 & 76.1    \\ \hline
-				\emph{ionosphere} & 89.2 & 92.0 & 90.0 & 89.2 & 100   \\ \hline
-				\emph{yeast}      & 56.5 & 57.7 & 57.7 & 59.4 & 67.8   \\ \hline
-\end{tabular}
-% TODO: Qualitaet einschaetzen
-
-\begin{tabular}{c|c|c|c|c|c}
-				Datensatz         & 10x10    \\ \hline
-				\emph{glass}      & 67.3     \\ \hline
-				\emph{iris}       & 92.0     \\ \hline
-				\emph{audiology}  & 67.3     \\ \hline
-				\emph{ionosphere} & 89.2     \\ \hline
-				\emph{yeast}      & 56.5     \\ \hline
-\end{tabular}
-
-% TODO: fuerht eine geschickte auswahl zu besseren abschaetzungen?
-
-\begin{tabular}{c|c}
-				Datensatz         & Validierungsmenge    \\ \hline
-				\emph{glass}      & 73.1     \\ \hline
-				\emph{iris}       & 93.3     \\ \hline
-				\emph{audiology}  & 67.3   \\ \hline
-				\emph{ionosphere} & 84.6   \\ \hline
-				\emph{yeast}      & 56.1 \\ \hline
-\end{tabular}
-
-% TODO: wie war die abschaetzung?
-% 10x10 Cross-Validation war grob am genausten
-
-% section aufgabe_2_evaluation_von_regellernern (end)
 \section{Aufgabe 3 ROC-Kurven}
-\label{sec:aufgabe_3_ROC_kurven}
-
-Datensatz: glass
-
-\begin{tabular}{c|c|c|c|c}
-				Regellerner       & \emph{build wind float} & \emph{containers} & \emph{tableware}  \\ \hline
-				\emph{J48}			& 0.81 & 0.87 & 0.93  \\ \hline
-				\emph{Naive Bayes}  & 0.71 & 0.84 & 0.98  
-\end{tabular}
-
+\input{a3}
 %TODO : Kurven vergleichen
 
-% section aufgabe_3_ROC_kurven (end)
 \section{Aufgabe 4 Entscheidungsb\"aume}
-\label{sec:aufgabe_4_entscheidungsbaume}
-
-Datensatz: contact lenses, kr-vs-kp
-
-Area under ROC curve
-
-\begin{tabular}{c|c|c|c}
-				Regellerner       & \emph{soft} & \emph{hard} & \emph{none}  \\ \hline
-				\emph{J48 - unpruned} &  &  &   \\ \hline
-				\emph{J48 - pruned}  &  &  &  \\ \hline
-				\emph{ID3}  &  &  &  \\ \hline
-\end{tabular}
-
-Accuracy
-
-\begin{tabular}{c|c|c}
-				Regellerner       & \emph{contact lenses} & \emph{kr-vs-kp}  \\ \hline
-				\emph{J48 - pruned} &   &   \\ \hline
-				\emph{J48 - unpruned}  & &  \\ \hline
-				\emph{ID3}  &  \\ \hline
-\end{tabular}
-
-Gr\"osse der entstandenen B\"aume
-
-
+\input{a4}
 %TODO: auswerten
 
-
-%section aufgabe_4_entscheidungsbaume (end)
-
 \section{Aufgabe 5 Nearest Neighbour}
-\label{sec:aufgabe_4_nearest_neighbour}
-
-Accuracy
-
-\begin{tabular}{c|c|c}
-                k-NN       & \emph{contact lenses} & \emph{kr-vs-kp}  \\ \hline
-				\emph{k = 1} & 79.17  & 96.28  \\ \hline
-				\emph{k = 3} & 79.17  & 96.50  \\ \hline
-				\emph{k = 5} & 66.67  & 96.03  \\ \hline
-				\emph{k = 7} & 58.33  & 95.40  \\ \hline
-				\emph{k = 9} & 58.33  & 95.24  \\ \hline
-				\emph{k = 11} & 58.33  & 95.06  \\ \hline
-\end{tabular}
-
+\input{a5}
 %TODO auswerten
-
-
-%section aufgabe_4_nearest_neighbour (end)
-
 
 \section{Aufgabe 6 Regressionsb\"aume}
 \label{sec:aufgabe_6_regressionsbaume}
-
 
 Commandlines: 
 
@@ -172,28 +48,12 @@ java -cp WEKAPATH weka.classifiers.trees.M5P -i -N -t Regression/housing.arf
 model tree, pruned
 java -cp WEKAPATH weka.classifiers.trees.M5P -i -t Regression/housing.arf
 
-\begin{table}
-\begin{tabular}{c|c|c|c|c|c|c|c|c}
-                Datensatz  & \emph{R P MAE } & \emph{R U MAE} & \emph{M P MAE} & \emph{M P MAE} & 
-\emph{R P RMSE} & \emph{R U RMSE} & \emph{M P RMSE} & \emph{M P RMSE} \\ \hline
-\emph{auto-price}  & 2096.37 & 2075.07& 1403.20 & 1466.56 & 3336.37  & 3287.12 & 2094.59 & 2171.16 \\ \hline
-\emph{concrete}    & 6.77 & 6.48& 4.27 & 4.74 &8.68 & 8.33 & 5.89 & 6.36 \\ \hline
-\emph{housing}     & 3.29 & 3.20& 2.39 & 2.50 & 4.82 & 4.72 & 3.71 & 3.75 \\ \hline
-\emph{stock}       & 1.19 & 1.17& 0.67 & 0.67 & 1.60 & 1.59 & 0.93 & 0.94 \\ \hline
-\emph{winequality} & 0.55 & 0.53& 0.51 & 0.55 & 0.72 & 0.70 & 0.68 & 0.71   
-\end{tabular}
-\caption{R: regression, M: model, U: unpruned, P: pruned, MAE: mean absolute error, RMSE: root mean squared error}
-\end{table}
-
-
 
 java -cp WEKAPATH weka.classifiers.trees.M5P -R -N -M 1 -i -t regression.arff -T regression\_test.arff
 
 
 MAE: 0.61 
 RMSE: 0.64 
-
-%section sec:aufgabe_6_regressionsbaume (end) 
 
 \section{Aufgabe 7}
 commandline: 
