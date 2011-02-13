@@ -5,18 +5,53 @@ Area under ROC curve
 
 \begin{tabular}{c|c|c|c}
 				Regellerner       & \emph{soft} & \emph{hard} & \emph{none}  \\ \hline
-				\emph{J48 - unpruned} &  &  &   \\ \hline
-				\emph{J48 - pruned}  &  &  &  \\ \hline
-				\emph{ID3}  &  &  &  \\ \hline
+				\emph{J48 - unpruned} & 0.97 & 0.99 & 0.97  \\ \hline
+				\emph{J48 - pruned}  & 0.97 & 0.99 & 0.97 \\ \hline
+				\emph{ID3}  & 1.00 & 1.00 & 1.00 \\ \hline
 \end{tabular}
+
+Pruning hat nichts gebracht!
+
+
+\begin{tabular}{c|c|c|c}
+				Regellerner       & \emph{won} & \emph{nowin} \\ \hline
+				\emph{J48 - unpruned} & 1.0 & 1.0  \\ \hline
+				\emph{J48 - pruned}  & 1.0 & 1.0  \\ \hline
+				\emph{ID3}  & 1.0 & 1.0 \\ \hline
+\end{tabular}
+
 
 Accuracy
 
 \begin{tabular}{c|c|c}
 				Regellerner       & \emph{contact lenses} & \emph{kr-vs-kp}  \\ \hline
-				\emph{J48 - pruned} &   &   \\ \hline
-				\emph{J48 - unpruned}  & &  \\ \hline
-				\emph{ID3}  &  \\ \hline
+				\emph{J48 - unpruned}  & 70.83 & 99.41 \\ \hline
+				\emph{J48 - pruned} & 83.33  & 99.44 \\ \hline
+				\emph{ID3}  & 70.83 & 99.69\\ \hline
 \end{tabular}
 
 Gr\"osse der entstandenen B\"aume
+
+J48 unpruned und pruned auf contact lenses: 
+
+Number of Leaves  : 	4
+Size of the tree : 	7
+
+ID3 auf contact lenses:
+Number of Leaves : 8
+Size of the tree : 14 ?
+
+J48 pruned auf kr-vs-jp:
+
+Number of Leaves  : 	31
+Size of the tree : 	59
+
+J48 unpruned auf kr-vs-jp:
+
+Number of Leaves  : 	43
+Size of the tree : 	82
+
+ID3 auuf kr-vs-jp:
+
+Number of Leaves : 49
+Size of the tree : 95
