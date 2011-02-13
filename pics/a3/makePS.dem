@@ -1,0 +1,25 @@
+set terminal postscript enhanced "Helvetica" 16
+set key right bottom box
+set pointsize 0.9
+
+set output "ROC_glass_build_wind_float.ps";
+set title "ROC glass build wind float"
+plot "ROC_glass_build_wind_float_J48.txt" with linespoints title "J48", "ROC_glass_build_wind_float_NB.txt"   with linespoints title "NB"
+
+set output "ROC_glass_containers.ps";
+set title "ROC glass containers"
+plot "ROC_glass_containers_J48.txt"   with linespoints title "J48", "ROC_glass_containers_NB.txt"   with linespoints title "NB"
+
+set output "ROC_glass_tableware.ps";
+set title "ROC glass tableware"
+plot "ROC_glass_tableware_J48.txt"   with linespoints title "J48", "ROC_glass_tableware_NB.txt"   with linespoints title "NB"
+
+
+set output "ROC_iris_versi.ps";
+set title "ROC iris versicolor"
+plot "ROC_iris_versi_J48.txt" with linespoints title "J48", "ROC_iris_versi_NB.txt"   with linespoints title "NB"
+
+set output "ROC_iris_virgi.ps";
+set title "ROC iris virginica"
+plot "ROC_iris_virgi_J48.txt"   with linespoints title "J48", "ROC_iris_virgi_NB.txt"   with linespoints title "NB"
+

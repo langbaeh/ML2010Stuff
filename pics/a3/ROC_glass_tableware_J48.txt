@@ -1,0 +1,5 @@
+# FalsePositiveRate TruePositiveRate
+1 1
+0.039024 0.888889
+0.029268 0.777778
+0.014634 0.555556
