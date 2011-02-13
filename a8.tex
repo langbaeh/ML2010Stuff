@@ -1,0 +1,48 @@
+
+numerische attribute entfernt: fnlwgt, education-num
+
+andere attribute entfernt: marital-status, capital-gain, capital-loss, sex
+
+
+sortiert nach lift: 
+
+relationship=Not-in-family 12583 ==> class=<=50K 11307    conf:(0.9) < lift:(1.18)> lev:(0.04) [1734] conv:(2.36)
+
+
+
+numerische attribute entfernt: fnlwgt, education-num
+
+andere attribute entfernt: marital-status, capital-gain, capital-loss, sex, age, relationship, native-country
+
+sortiert nach confidence:
+
+class=>50K 11687 ==> race=White 10607    conf:(0.91)
+workclass=Private class=>50K 7387 ==> race=White 6742    conf:(0.91)
+hoursperweek=3 9025 ==> race=White 8226    conf:(0.91)
+
+
+numerische attribute entfernt: fnlwgt, education-num
+
+andere attribute entfernt: marital-status, capital-gain, capital-loss, sex, age, relationship, native-country, workclass, hoursperweek
+
+
+education=Some-college 10878 ==> race=White 9289    conf:(0.85)
+education=HS-grad 15784 ==> race=White 13387    conf:(0.85)
+
+
+attributes: age, education, marital-status, occupation
+
+1. age=0 9627 ==> marital-status=Never-married 8229    conf:(0.85)
+2. age=3 8296 ==> marital-status=Married-civ-spouse 5139    conf:(0.62)
+
+
+attributes: marital-status, relationship, class
+
+class=>50K 11687 ==> marital-status=Married-civ-spouse 9984    conf:(0.85)
+ relationship=Own-child 7581 ==> class=<=50K 7470    conf:(0.99)
+
+attributes: occupation, race, sex
+
+5. occupation=Exec-managerial 6086 ==> race=White 5474    conf:(0.9)
+6. occupation=Sales 5504 ==> race=White 4910    conf:(0.89)
+
