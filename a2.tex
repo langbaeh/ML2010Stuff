@@ -1,4 +1,4 @@
-
+\subsubsection*{a}
 \begin{tabular}{c|c|c|c|c|c}
 				Datensatz         & 1x5  & 1x10 & 1x20 & LOO  & Trainingsmenge   \\ \hline
 				\emph{glass}      & 67.3 & 61.8 & 60.7 & 61.7 & 85.98   \\ \hline
@@ -8,12 +8,9 @@
 				\emph{yeast}      & 56.5 & 57.7 & 57.7 & 59.4 & 67.8   \\ \hline
 \end{tabular}
 
-Die geschätzte Genauigkeit wird auf der gesamten Trainingsmenge immer höher sein als auf Echtdaten.
+Die gesch\"atzte Genauigkeit wird auf der gesamten Trainingsmenge immer h\"oher sein als auf Echtdaten, da die Regeln speziell f\"ur diese Daten trainiert wurden. In der Praxis sollte man daher Cross-Validation verwenden um sinnvolle Genauigkeiten zu erhalten. Die Qualit\"at der Absch\"atzung wird besser, je mehr Folds man f\"ur die Cross-Validation verwendet. Am genauesten sollte die Leave-One-Out Methode sein, sie ben\"otigt jedoch auch die meiste Zeit. In der Praxis sollte man darauf R\"ucksicht nehmen.
 
-
-
-% TODO: Qualitaet einschaetzen
-
+\subsubsection*{b}
 \begin{tabular}{c|c|c|c|c|c}
 				Datensatz         & 10x10    \\ \hline
 				\emph{glass}      & 67.3     \\ \hline
@@ -23,8 +20,10 @@ Die geschätzte Genauigkeit wird auf der gesamten Trainingsmenge immer höher se
 				\emph{yeast}      & 56.5     \\ \hline
 \end{tabular}
 
-Die Änderung des seeds hat keine signifikante Veränderung der Abschätzung bewirkt.
+Die \"Anderung des seeds hat keine signifikante Ver\"anderung der Absch\"atzung bewirkt. Im Allgemeinen sollte die Auswahl der Random-Seeds auch keinen Einfluss auf die Absch\"atzung haben.
 
+
+\subsubsection*{c}
 \begin{tabular}{c|c}
 				Datensatz         & Validierungsmenge    \\ \hline
 				\emph{glass}      & 73.1     \\ \hline
@@ -34,6 +33,4 @@ Die Änderung des seeds hat keine signifikante Veränderung der Abschätzung bew
 				\emph{yeast}      & 56.1 \\ \hline
 \end{tabular}
 
-
-% TODO: wie war die abschaetzung?
-% 10x10 Cross-Validation war grob am genausten
+Die Genauigkeit der Evaluierungsmethoden h\"angt stark vom entsprechenden Datensatz ab. Im Allgemeinen konnte keine Methode immer gute Absch\"atzungen liefern.

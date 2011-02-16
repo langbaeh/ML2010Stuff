@@ -26,7 +26,11 @@ JRip             &   6   &  3   &   3    \\ \hline
 Prism	         &   6   &  3   &   3    \\
 \end{tabular}\\ \\
 
+\emph{Prism} erzeugt bei allen Datens\"atzen die meisten Regeln und Bedingungen. \emph{Conjunctive Rule} erzeugt fast immer nur eine Regel mit einer Bedingung.
 
-Eine Default Rule existiert nur bei JRip. Dort wird als Defaultklasse \"ublicherweise die Klasse gew\"ahlt, die am h\"aufigsten im Datensatz vorkommt. 
+Eine Default Rule existiert nur bei JRip. Dort wird als Defaultklasse \"ublicherweise die Klasse gew\"ahlt, die am h\"aufigsten im Datensatz vorkommt. Um zukünftige Daten zu klassifizieren ist das im Hinblick auf relative Häufigkeiten die sinnvollste Entscheidung.
 
-Der Datensatz \emph{iris} l\"asst sich am einfachsten lernen, da man hier besonders wenig Regeln und besonders wenig Bedingungen ben\"otigt.
+Der Datensatz \emph{iris} l\"asst sich am einfachsten lernen, da man hier alle Algorithmen besonders wenig Regeln und besonders wenig Bedingungen ben\"otigen.
+
+Auf dem Datensatz \emph{Contact Lenses} erzeugt \emph{JRip} 3 Regeln, wo bei einer davon der Default-Rule entspricht. \emph{Prism} erzeugt hingehen 9 Regeln. Die Anzahl der Bedingungen ist ebenfalls h\"oher f\"ur die von \emph{Prism} gefundenen Regeln. Daraus l\"asst sich folgern, dass \emph{JRip} vermutlich besser veralgemeinert. 
+Dieser Unterschied entsteht hier vorallem durch dir verschiedenen Performance Ma\sse. Da \emph{Prism} Precision verwendet, wird lediglich auf eine hohe Anzahl von korrekt klassifizierten Beispielen optimiert. Deshalb tendiert der Algorithmus eher zum Overfitting und erzeugt viele Regeln mit vielen Bedingungen. \emph{JRip} hingegen zieht durch das Gain Ma\ss auch die Anzahl der Regeln in Betracht und versucht dadurch nur wichtige Regeln zu lernen um Overfitting zu vermeiden.
