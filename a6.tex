@@ -1,44 +1,39 @@
 
+Tabelle f\"ur den \emph{Mean Absolute Error}:
+
 \begin{table}
 \begin{tabular}{c|c|c|c|c}
-Datensatz  & \emph{R P MAE } & \emph{R U MAE} & \emph{M P MAE} & \emph{M P MAE} \\ \hline
+Datensatz  & \emph{R P MAE } & \emph{R U MAE} & \emph{M P MAE} & \emph{M U MAE} \\ \hline
 \emph{auto-price}  & 2096.37 & 2075.07& 1403.20 & 1466.56 \\ \hline
 \emph{concrete}    & 6.77    & 6.48   & 4.27    & 4.74     \\ \hline
 \emph{housing}     & 3.29    & 3.20   & 2.39    & 2.50     \\ \hline
 \emph{stock}       & 1.19    & 1.17   & 0.67    & 0.67     \\ \hline
 \emph{winequality} & 0.55    & 0.53   & 0.51    & 0.55       
 \end{tabular}
-\caption{R: \emph{M5P} or M: \emph{Model Trees} \\
- U: \emph{unpruned} or P: \emph{pruned}}
+\caption{R: \emph{Regression-Trees} or M: \emph{Model-Trees} \\
+U: \emph{unpruned} or P: \emph{pruned} }
 \end{table}
 
 
+Tabelle für den \emph{Root Mean Squared Error}:
 
 \begin{table}
 \begin{tabular}{c|c|c|c|c}
-Datensatz  & \emph{R P RMSE} & \emph{R U RMSE} & \emph{M P RMSE} & \emph{M P RMSE} \\ \hline
+Datensatz  & \emph{R P RMSE} & \emph{R U RMSE} & \emph{M P RMSE} & \emph{M U RMSE} \\ \hline
 \emph{auto-price}  & 3336.37  & 3287.12 & 2094.59 & 2171.16 \\ \hline
 \emph{concrete}    & 8.68 & 8.33 & 5.89 & 6.36 \\ \hline
 \emph{housing}     & 4.82 & 4.72 & 3.71 & 3.75 \\ \hline
 \emph{stock}       & 1.60 & 1.59 & 0.93 & 0.94 \\ \hline
 \emph{winequality} & 0.72 & 0.70 & 0.68 & 0.71   
 \end{tabular}
-\caption{R: \emph{M5P} or M: \emph{Model Trees} \\
- U: \emph{unpruned} or P: \emph{pruned} }
+\caption{R: \emph{Regression-Trees} or M: \emph{Model-Trees} \\
+U: \emph{unpruned} or P: \emph{pruned} }
 \end{table}
 
 
-
-Number of Rules : 4
-
-MAE: 0.61 
-RMSE: 0.64
+Aus den Tabellen k\"onnen wir ablesen, dass bei Regression-Tasks keine Verbesserung bringt. \emph{Model-Trees} haben auf allen Datensets einen kleineren Fehler als \emph{Regression-Trees}. Verwendet man Pruning bei \emph{Model-Trees} liefert es eine leichte Verbesserung.
 
 
+\emph{M5P} liefert einen dem aus der \"Ubung \"ahnlichen Baum: Auf den ersten beiden Ebenen wird an denselben Attributen gesplittet. Danach erzeugt \emph{M5P} direkt Bl\"atter und l\"ost den Baum  nicht feiner auf. Der \emph{M5P}-Baum ist kleiner und wahrscheinlich allgemeiner. 
 
-A2=I <= 0.5 : \\
-|   A1=A <= 0.5 : LM1 (6/4.142\%) \\
-|   A1=A >  0.5 : LM2 (3/15.306\%)\\
-A2=I >  0.5 :  \\
-|   A3=R <= 0.5 : LM3 (2/6.704\%) \\
-|   A3=R >  0.5 : LM4 (3/12.387\%) \\
+Der \emph{Root Mean Squared Error} des Baumes aus der \"Ubung betrugt $0.75$, der jetzt gelernte Baum hat einen \emph{RMSE} von $0.64$ auf den Testdaten. Dies best\"atigt unsere Vermutung, dass der \emph{M5P}-Baum allgemeiner ist.
