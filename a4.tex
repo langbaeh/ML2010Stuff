@@ -1,7 +1,8 @@
 
-Datens\"atz: glass (discretize filter), kr-vs-kp
+Datensets: glass (discretize filter), kr-vs-kp
 
 \textbf{Area under ROC curve}
+
 \begin{tabular}{c|c|c|c|c|c|c}
 				Regellerner       & \emph{bwf} & \emph{bwn} & \emph{vwf}  & \emph{cont} & \emph{table} & \emph{head} \\ \hline
 				\emph{J48 - unpruned}& 0.73 & 0.70 & 0.71 & 0.87 & 0.92 & 0.92 \\ \hline
@@ -20,6 +21,7 @@ Pruning hat nichts gebracht!
 
 
 \textbf{Accuracy}
+
 \begin{tabular}{c|c|c}
 				Regellerner       & \emph{glass} & \emph{kr-vs-kp}  \\ \hline
 				\emph{J48 - unpruned}  & 57.94 & 99.41 \\ \hline
@@ -27,7 +29,7 @@ Pruning hat nichts gebracht!
 				\emph{ID3}  & 50.47 & 99.69\\ \hline
 \end{tabular}
 
-Gr\"osse der entstandenen B\"aume
+\textbf{Gr\"osse der entstandenen B\"aume}
 
 \emph{glass}:
 \begin{tabular}{c|c|c}
@@ -45,3 +47,5 @@ Gr\"osse der entstandenen B\"aume
 	\emph{J48 - pruned} & 59  & 31 \\ \hline
 	\emph{ID3}  & 95 & 49\\ \hline
 \end{tabular}
+
+Betrachtet man die Fl\"ache unter der ROC Kurve so hat \emph{ID3} im Allgemeinen schlechtere Werte. Dies spiegelt sich auch in der Accuracy wieder. Au\ss erdem erzeugt \emph{ID3} immer einen gr\"o\ss eren Baum. Man kann also deutlich erkennen, das ein gro\ss er Baum schlecht veralgemeinert und somit auch schlechtere Performancewerte erzielt. Das Pruning von \emph{J48} erzeugt einen kleineren Baum, der allerdings nicht deutlich bessere Performance liefert. Dieser Effekt ist dabei wahrscheinlich stark abh\"angig von den von uns gew\"ahlten Datensets.
