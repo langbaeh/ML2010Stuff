@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[pdftex,active,tightpage]{preview}
+\setlength\PreviewBorder{1mm}
+
+\usepackage{tikz}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+
+
+\begin{document}
+	\begin{preview}
+		\pgfplotsset{every axis legend/.append style={
+		at={(0.5,1.03)},
+		anchor=south}}
+
+\begin{tikzpicture}[domain=0:1]	
+			\begin{axis}[legend columns = 4, 
+		        xlabel=$true positive$,
+		        ylabel=$true positive rate \%$]
+		
+		\addplot[red,smooth]
+		table[x=FalsePositiveRate,y=TruePositiveRate] {ROC_glass_containers_J48.arff};
+		
+		\end{axis}
+
+\end{tikzpicture}
+
+
+\end{preview}
+\end{document}

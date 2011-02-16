@@ -1,74 +1,46 @@
 \input{header}
 
-
-\areaset[66pt]{415pt}{600pt}
+%\areaset[66pt]{415pt}{600pt}
 
 
 \begin{document}
-\title{WEKA BLAAAA}
+\title{WEKA Projekt}
 \author{Fabian Langguth, Sebastian Koch}
-\date{November 2010}
+\date{Wintersemester 10/11}
 
 \maketitle
 
-\section{Aufgabe 1 Regellernen} 
+%TODO formatieren!
+\section*{Aufgabe 1 Regellernen} 
 \input{a1}
 \newpage
 
-\section{Aufgabe 2 Evaluation von Regellernern}
+\section*{Aufgabe 2 Evaluation von Regellernern}
 \input{a2}
 \newpage
 
-\section{Aufgabe 3 ROC-Kurven}
+\section*{Aufgabe 3 ROC-Kurven}
 \input{a3}
-%TODO : Kurven vergleichen
 \newpage
-\section{Aufgabe 4 Entscheidungsb\"aume}
+\section*{Aufgabe 4 Entscheidungsb\"aume}
 \input{a4}
-%TODO: auswerten
 \newpage
-\section{Aufgabe 5 Nearest Neighbour}
+\section*{Aufgabe 5 Nearest Neighbour}
 \input{a5}
-%TODO auswerten
 \newpage
-\section{Aufgabe 6 Regressionsb\"aume}
+\section*{Aufgabe 6 Regressionsb\"aume}
 \label{sec:aufgabe_6_regressionsbaume}
 
-Commandlines: 
 \input{a6}
-regression tree, unpruned
-java -cp WEKAPATH weka.classifiers.trees.M5P -R -N -i -t Regression/housing.arf
-
-regression tree, pruned
-java -cp WEKAPATH weka.classifiers.trees.M5P -R -i -t Regression/housing.arf
-
-model tree, unpruned
-java -cp WEKAPATH weka.classifiers.trees.M5P -i -N -t Regression/housing.arf
-
-model tree, pruned
-java -cp WEKAPATH weka.classifiers.trees.M5P -i -t Regression/housing.arf
-
-
-java -cp WEKAPATH weka.classifiers.trees.M5P -R -N -M 1 -i -t regression.arff -T regression\_test.arff
-
-\section{Aufgabe 7}
-commandline: 
-
-java -cp WEKAPATH weka.classifiers.Bagging -W weka.classifiers.trees.J48 -i -t contact\_lenses.arff -- -U
+\newpage
+\section*{Aufgabe 7 Ensemble-Lernen}
 \input{a7}
 \newpage
-
-%TODO auswerten
-
-\section{Aufgabe 8}
+\section*{Aufgabe 8 Entdecken von Assoziationsregeln}
 \input{a8}
+%TODO verschoenern
 \newpage
-
-%TODO wtf ??
-
-\section{Aufgabe 9 | Pre-Processing}
+\section*{Aufgabe 9  Pre-Processing}
 \input{a9}
 
-%TODO auswerten
-\newpage
 \end{document}

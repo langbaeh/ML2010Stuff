@@ -1,0 +1,118 @@
+
+Prism rules
+----------
+If petallength = '(-inf-2.45]' then Iris-setosa
+If petallength = '(2.45-4.75]'
+   and sepallength = '(5.55-6.15]' then Iris-versicolor
+If petallength = '(2.45-4.75]'
+   and sepallength = '(6.15-inf)' then Iris-versicolor
+If petallength = '(2.45-4.75]'
+   and sepalwidth = '(2.95-3.35]' then Iris-versicolor
+If petallength = '(2.45-4.75]'
+   and sepallength = '(-inf-5.55]'
+   and sepalwidth = '(-inf-2.95]'
+   and petalwidth = '(0.8-1.75]' then Iris-versicolor
+If petalwidth = '(0.8-1.75]'
+   and sepallength = '(6.15-inf)'
+   and petallength = '(4.75-inf)'
+   and sepalwidth = '(-inf-2.95]' then Iris-versicolor
+If petalwidth = '(0.8-1.75]'
+   and sepallength = '(6.15-inf)'
+   and sepalwidth = '(2.95-3.35]'
+   and petallength = '(4.75-inf)' then Iris-versicolor
+If petalwidth = '(0.8-1.75]'
+   and sepallength = '(5.55-6.15]'
+   and sepalwidth = '(-inf-2.95]'
+   and petallength = '(4.75-inf)' then Iris-versicolor
+If sepallength = '(5.55-6.15]'
+   and sepalwidth = '(2.95-3.35]'
+   and petallength = '(4.75-inf)'
+   and petalwidth = '(1.75-inf)' then Iris-versicolor
+If petalwidth = '(1.75-inf)'
+   and sepallength = '(6.15-inf)' then Iris-virginica
+If petalwidth = '(1.75-inf)'
+   and sepalwidth = '(-inf-2.95]' then Iris-virginica
+If petalwidth = '(1.75-inf)'
+   and sepallength = '(5.55-6.15]'
+   and sepalwidth = '(2.95-3.35]'
+   and petallength = '(4.75-inf)' then Iris-virginica
+If petallength = '(4.75-inf)'
+   and sepallength = '(5.55-6.15]'
+   and sepalwidth = '(-inf-2.95]'
+   and petalwidth = '(0.8-1.75]' then Iris-virginica
+If petallength = '(4.75-inf)'
+   and sepallength = '(6.15-inf)'
+   and petalwidth = '(0.8-1.75]'
+   and sepalwidth = '(-inf-2.95]' then Iris-virginica
+If petallength = '(4.75-inf)'
+   and sepallength = '(6.15-inf)'
+   and sepalwidth = '(2.95-3.35]'
+   and petalwidth = '(0.8-1.75]' then Iris-virginica
+If sepalwidth = '(-inf-2.95]'
+   and sepallength = '(-inf-5.55]'
+   and petallength = '(2.45-4.75]'
+   and petalwidth = '(0.8-1.75]' then Iris-virginica
+
+
+Time taken to build model: 0.02 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         142               94.6667 %
+Incorrectly Classified Instances         8                5.3333 %
+Kappa statistic                          0.92  
+Mean absolute error                      0.0356
+Root mean squared error                  0.1886
+Relative absolute error                  8      %
+Root relative squared error             40      %
+Total Number of Instances              150     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0          1         1         1          1        Iris-setosa
+                 1         0.08       0.862     1         0.926      0.96     Iris-versicolor
+                 0.84      0          1         0.84      0.913      0.92     Iris-virginica
+Weighted Avg.    0.947     0.027      0.954     0.947     0.946      0.96 
+
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 50  0 |  b = Iris-versicolor
+  0  8 42 |  c = Iris-virginica
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         139               92.6667 %
+Incorrectly Classified Instances        10                6.6667 %
+Kappa statistic                          0.8994
+Mean absolute error                      0.0447
+Root mean squared error                  0.2115
+Relative absolute error                 10.1347 %
+Root relative squared error             45.0215 %
+UnClassified Instances                   1                0.6667 %
+Total Number of Instances              150     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0          1         1         1          1        Iris-setosa
+                 0.959     0.08       0.855     0.959     0.904      0.93     Iris-versicolor
+                 0.84      0.02       0.955     0.84      0.894      0.91     Iris-virginica
+Weighted Avg.    0.933     0.033      0.937     0.933     0.933      0.947
+
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 47  2 |  b = Iris-versicolor
+  0  8 42 |  c = Iris-virginica
+

@@ -1,0 +1,468 @@
+
+Prism rules
+----------
+If RI = '(1.517335-1.517985]'
+   and Ca = '(7.02-8.315]' then build wind float
+If RI = '(1.517335-1.517985]'
+   and Al = '(-inf-1.39]'
+   and K = '(0.055-0.615]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If RI = '(1.517335-1.517985]'
+   and Al = '(-inf-1.39]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and K = '(0.615-0.745]'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If RI = '(1.517335-1.517985]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Al = '(1.39-1.775]'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If Al = '(-inf-1.39]'
+   and Ca = '(8.315-10.075]'
+   and Na = '(14.065-inf)'
+   and Mg = '(2.695-inf)'
+   and K = '(0.055-0.615]'
+   and RI = '(1.517985-inf)'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If Al = '(-inf-1.39]'
+   and Ca = '(8.315-10.075]'
+   and RI = '(1.517985-inf)'
+   and K = '(0.055-0.615]'
+   and Na = '(-inf-14.065]'
+   and Ba = '(0.335-inf)' then build wind float
+If Al = '(-inf-1.39]'
+   and Ca = '(8.315-10.075]'
+   and K = '(-inf-0.055]'
+   and Mg = '(2.695-inf)'
+   and Na = '(-inf-14.065]' then build wind float
+If Al = '(-inf-1.39]'
+   and Ca = '(8.315-10.075]'
+   and RI = '(1.517985-inf)'
+   and K = '(0.055-0.615]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If Al = '(-inf-1.39]'
+   and Na = '(14.065-inf)'
+   and Mg = '(2.695-inf)'
+   and RI = '(1.517985-inf)'
+   and Si = 'All'
+   and K = '(-inf-0.055]'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If Al = '(-inf-1.39]'
+   and RI = '(-inf-1.517335]'
+   and K = '(0.615-0.745]'
+   and Ca = '(8.315-10.075]' then build wind float
+If Al = '(-inf-1.39]'
+   and Mg = '(2.695-inf)'
+   and Ca = '(10.075-inf)'
+   and RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If Al = '(-inf-1.39]'
+   and RI = '(-inf-1.517335]'
+   and K = '(0.055-0.615]'
+   and Ca = '(8.315-10.075]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If Ca = '(7.02-8.315]'
+   and RI = '(1.517985-inf)'
+   and Al = '(-inf-1.39]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If K = '(0.615-0.745]'
+   and Al = '(1.39-1.775]'
+   and Ca = '(7.02-8.315]'
+   and RI = '(-inf-1.517335]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If Ca = '(7.02-8.315]'
+   and Al = '(1.39-1.775]'
+   and RI = '(-inf-1.517335]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind float
+If K = '(0.615-0.745]'
+   and Al = '(1.775-inf)' then build wind non-float
+If Ca = '(7.02-8.315]'
+   and K = '(0.745-inf)' then build wind non-float
+If K = '(0.615-0.745]'
+   and RI = '(1.517985-inf)' then build wind non-float
+If Ca = '(7.02-8.315]'
+   and RI = '(1.517985-inf)'
+   and Al = '(1.39-1.775]' then build wind non-float
+If Ca = '(7.02-8.315]'
+   and K = '(0.615-0.745]'
+   and Al = '(-inf-1.39]' then build wind non-float
+If Ca = '(7.02-8.315]'
+   and Al = '(1.39-1.775]'
+   and K = '(0.055-0.615]'
+   and Na = '(14.065-inf)' then build wind non-float
+If Ca = '(7.02-8.315]'
+   and Al = '(1.39-1.775]'
+   and K = '(0.055-0.615]'
+   and RI = '(-inf-1.517335]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If K = '(0.615-0.745]'
+   and Al = '(1.39-1.775]'
+   and Ca = '(8.315-10.075]' then build wind non-float
+If K = '(0.615-0.745]'
+   and Al = '(1.39-1.775]'
+   and RI = '(-inf-1.517335]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Ca = '(7.02-8.315]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If Ca = '(10.075-inf)'
+   and Ba = '(0.335-inf)' then build wind non-float
+If Ca = '(10.075-inf)'
+   and Al = '(-inf-1.39]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(-inf-2.695]' then build wind non-float
+If Ca = '(7.02-8.315]'
+   and RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Al = '(-inf-1.39]'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If Ca = '(10.075-inf)'
+   and Mg = '(2.695-inf)'
+   and RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Al = '(-inf-1.39]'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If Al = '(1.39-1.775]'
+   and RI = '(-inf-1.517335]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If Al = '(1.39-1.775]'
+   and RI = '(1.517985-inf)'
+   and Mg = '(2.695-inf)'
+   and Na = '(-inf-14.065]'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If Ca = '(10.075-inf)'
+   and Al = '(-inf-1.39]'
+   and K = '(0.055-0.615]' then build wind non-float
+If RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and K = '(0.745-inf)'
+   and Ca = '(10.075-inf)' then build wind non-float
+If RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Al = '(1.39-1.775]'
+   and Ca = '(8.315-10.075]'
+   and K = '(0.055-0.615]' then build wind non-float
+If K = '(0.615-0.745]'
+   and RI = '(1.517335-1.517985]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Al = '(-inf-1.39]'
+   and Si = 'All'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Al = '(-inf-1.39]'
+   and Si = 'All'
+   and Ca = '(8.315-10.075]'
+   and Fe = 'All' then build wind non-float
+If Ca = '(7.02-8.315]'
+   and RI = '(-inf-1.517335]'
+   and Na = '(-inf-14.065]' then build wind non-float
+If Ca = '(10.075-inf)'
+   and Al = '(1.39-1.775]'
+   and RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Mg = '(-inf-2.695]'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If Al = '(-inf-1.39]'
+   and RI = '(-inf-1.517335]'
+   and K = '(0.055-0.615]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If RI = '(1.517335-1.517985]'
+   and Ca = '(8.315-10.075]'
+   and Al = '(-inf-1.39]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then build wind non-float
+If Ca = '(8.315-10.075]'
+   and RI = '(-inf-1.517335]'
+   and Al = '(-inf-1.39]'
+   and K = '(0.055-0.615]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then vehic wind float
+If RI = '(1.517335-1.517985]'
+   and Al = '(1.39-1.775]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then vehic wind float
+If Ca = '(8.315-10.075]'
+   and Al = '(1.39-1.775]'
+   and Mg = '(2.695-inf)'
+   and K = '(0.055-0.615]'
+   and RI = '(-inf-1.517335]'
+   and Na = '(-inf-14.065]'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then vehic wind float
+If Ca = '(8.315-10.075]'
+   and Mg = '(2.695-inf)'
+   and Na = '(14.065-inf)'
+   and K = '(-inf-0.055]'
+   and RI = '(1.517985-inf)'
+   and Al = '(-inf-1.39]'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then vehic wind float
+If RI = '(1.517335-1.517985]'
+   and Ca = '(8.315-10.075]'
+   and K = '(0.055-0.615]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Al = '(-inf-1.39]'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then vehic wind float
+If Ca = '(8.315-10.075]'
+   and K = '(0.055-0.615]'
+   and Al = '(1.39-1.775]'
+   and Mg = '(2.695-inf)'
+   and RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Si = 'All'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then vehic wind float
+If Al = '(-inf-1.39]'
+   and Na = '(14.065-inf)'
+   and Mg = '(2.695-inf)'
+   and RI = '(1.517985-inf)'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ca = '(8.315-10.075]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then vehic wind float
+If Al = '(-inf-1.39]'
+   and Ca = '(8.315-10.075]'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Fe = 'All' then vehic wind float
+If Ca = '(-inf-7.02]'
+   and Na = '(-inf-14.065]'
+   and Mg = '(-inf-2.695]' then containers
+If Ca = '(10.075-inf)'
+   and RI = '(-inf-1.517335]' then containers
+If Ca = '(10.075-inf)'
+   and Al = '(1.39-1.775]'
+   and RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]'
+   and Mg = '(-inf-2.695]'
+   and Si = 'All'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]'
+   and Fe = 'All' then containers
+If K = '(0.745-inf)'
+   and Ca = '(8.315-10.075]'
+   and RI = '(1.517985-inf)'
+   and Na = '(-inf-14.065]' then containers
+If Ca = '(10.075-inf)'
+   and Al = '(1.775-inf)'
+   and K = '(0.055-0.615]'
+   and Ba = '(-inf-0.335]' then containers
+If K = '(-inf-0.055]'
+   and Al = '(1.39-1.775]' then tableware
+If Ca = '(-inf-7.02]'
+   and Al = '(-inf-1.39]' then tableware
+If K = '(-inf-0.055]'
+   and Ca = '(10.075-inf)'
+   and Na = '(14.065-inf)' then tableware
+If K = '(-inf-0.055]'
+   and Na = '(-inf-14.065]'
+   and Ca = '(8.315-10.075]'
+   and RI = '(1.517985-inf)'
+   and Mg = '(-inf-2.695]' then tableware
+If Ba = '(0.335-inf)'
+   and Na = '(14.065-inf)' then headlamps
+If Ba = '(0.335-inf)'
+   and K = '(-inf-0.055]' then headlamps
+If Ba = '(0.335-inf)'
+   and RI = '(-inf-1.517335]'
+   and Mg = '(2.695-inf)' then headlamps
+If Ba = '(0.335-inf)'
+   and RI = '(-inf-1.517335]'
+   and K = '(0.055-0.615]' then headlamps
+If K = '(0.745-inf)'
+   and Al = '(-inf-1.39]' then headlamps
+If K = '(0.745-inf)'
+   and Na = '(14.065-inf)'
+   and RI = '(1.517985-inf)' then headlamps
+If RI = '(1.517985-inf)'
+   and Ca = '(8.315-10.075]'
+   and K = '(0.055-0.615]'
+   and Al = '(-inf-1.39]'
+   and Na = '(-inf-14.065]'
+   and Ba = '(-inf-0.335]'
+   and Mg = '(2.695-inf)'
+   and Si = 'All'
+   and Fe = 'All' then headlamps
+
+
+Time taken to build model: 0.04 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         147               68.6916 %
+Incorrectly Classified Instances        67               31.3084 %
+Kappa statistic                          0.5601
+Mean absolute error                      0.0895
+Root mean squared error                  0.2991
+Relative absolute error                 42.2767 %
+Root relative squared error             92.1831 %
+Total Number of Instances              214     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0.403      0.547     1         0.707      0.799    build wind float
+                 0.447     0.065      0.791     0.447     0.571      0.691    build wind non-float
+                 0         0          0         0         0          0.5      vehic wind float
+                 0         0          0         0         0          ?        vehic wind non-float
+                 0.462     0          1         0.462     0.632      0.731    containers
+                 1         0          1         1         1          1        tableware
+                 0.966     0          1         0.966     0.982      0.983    headlamps
+Weighted Avg.    0.687     0.155      0.698     0.687     0.648      0.766
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g   <-- classified as
+ 70  0  0  0  0  0  0 |  a = build wind float
+ 42 34  0  0  0  0  0 |  b = build wind non-float
+ 15  2  0  0  0  0  0 |  c = vehic wind float
+  0  0  0  0  0  0  0 |  d = vehic wind non-float
+  0  7  0  0  6  0  0 |  e = containers
+  0  0  0  0  0  9  0 |  f = tableware
+  1  0  0  0  0  0 28 |  g = headlamps
+
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         120               56.0748 %
+Incorrectly Classified Instances        86               40.1869 %
+Kappa statistic                          0.4049
+Mean absolute error                      0.1193
+Root mean squared error                  0.3454
+Relative absolute error                 58.7348 %
+Root relative squared error            108.8738 %
+UnClassified Instances                   8                3.7383 %
+Total Number of Instances              214     
+
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.914     0.434      0.52      0.914     0.663      0.752    build wind float
+                 0.384     0.128      0.622     0.384     0.475      0.623    build wind non-float
+                 0         0          0         0         0          0.5      vehic wind float
+                 0         0          0         0         0          ?        vehic wind non-float
+                 0.364     0.031      0.4       0.364     0.381      0.639    containers
+                 0.375     0.01       0.6       0.375     0.462      0.662    tableware
+                 0.778     0.011      0.913     0.778     0.84       0.857    headlamps
+Weighted Avg.    0.583     0.196      0.562     0.583     0.542      0.69 
+
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g   <-- classified as
+ 64  4  0  0  0  1  1 |  a = build wind float
+ 41 28  0  0  3  0  1 |  b = build wind non-float
+ 15  2  0  0  0  0  0 |  c = vehic wind float
+  0  0  0  0  0  0  0 |  d = vehic wind non-float
+  0  7  0  0  4  0  0 |  e = containers
+  1  3  0  0  1  3  0 |  f = tableware
+  2  1  0  0  2  1 21 |  g = headlamps
+
