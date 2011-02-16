@@ -1,15 +1,30 @@
 
 \begin{table}
-\begin{tabular}{c|c|c|c|c|c|c|c|c}
-                Datensatz  & \emph{R P MAE } & \emph{R U MAE} & \emph{M P MAE} & \emph{M P MAE} & 
-\emph{R P RMSE} & \emph{R U RMSE} & \emph{M P RMSE} & \emph{M P RMSE} \\ \hline
-\emph{auto-price}  & 2096.37 & 2075.07& 1403.20 & 1466.56 & 3336.37  & 3287.12 & 2094.59 & 2171.16 \\ \hline
-\emph{concrete}    & 6.77 & 6.48& 4.27 & 4.74 &8.68 & 8.33 & 5.89 & 6.36 \\ \hline
-\emph{housing}     & 3.29 & 3.20& 2.39 & 2.50 & 4.82 & 4.72 & 3.71 & 3.75 \\ \hline
-\emph{stock}       & 1.19 & 1.17& 0.67 & 0.67 & 1.60 & 1.59 & 0.93 & 0.94 \\ \hline
-\emph{winequality} & 0.55 & 0.53& 0.51 & 0.55 & 0.72 & 0.70 & 0.68 & 0.71   
+\begin{tabular}{c|c|c|c|c}
+Datensatz  & \emph{R P MAE } & \emph{R U MAE} & \emph{M P MAE} & \emph{M P MAE} \\ \hline
+\emph{auto-price}  & 2096.37 & 2075.07& 1403.20 & 1466.56 \\ \hline
+\emph{concrete}    & 6.77    & 6.48   & 4.27    & 4.74     \\ \hline
+\emph{housing}     & 3.29    & 3.20   & 2.39    & 2.50     \\ \hline
+\emph{stock}       & 1.19    & 1.17   & 0.67    & 0.67     \\ \hline
+\emph{winequality} & 0.55    & 0.53   & 0.51    & 0.55       
 \end{tabular}
-\caption{R: regression, M: model, U: unpruned, P: pruned, MAE: mean absolute error, RMSE: root mean squared error}
+\caption{R: \emph{M5P} or M: \emph{Model Trees} \\
+ U: \emph{unpruned} or P: \emph{pruned}}
+\end{table}
+
+
+
+\begin{table}
+\begin{tabular}{c|c|c|c|c}
+Datensatz  & \emph{R P RMSE} & \emph{R U RMSE} & \emph{M P RMSE} & \emph{M P RMSE} \\ \hline
+\emph{auto-price}  & 3336.37  & 3287.12 & 2094.59 & 2171.16 \\ \hline
+\emph{concrete}    & 8.68 & 8.33 & 5.89 & 6.36 \\ \hline
+\emph{housing}     & 4.82 & 4.72 & 3.71 & 3.75 \\ \hline
+\emph{stock}       & 1.60 & 1.59 & 0.93 & 0.94 \\ \hline
+\emph{winequality} & 0.72 & 0.70 & 0.68 & 0.71   
+\end{tabular}
+\caption{R: \emph{M5P} or M: \emph{Model Trees} \\
+ U: \emph{unpruned} or P: \emph{pruned} }
 \end{table}
 
 
@@ -21,9 +36,9 @@ RMSE: 0.64
 
 
 
-A2=I <= 0.5 : 
-|   A1=A <= 0.5 : LM1 (6/4.142\%)
-|   A1=A >  0.5 : LM2 (3/15.306\%)
-A2=I >  0.5 : 
-|   A3=R <= 0.5 : LM3 (2/6.704\%)
-|   A3=R >  0.5 : LM4 (3/12.387\%)
+A2=I <= 0.5 : \\
+|   A1=A <= 0.5 : LM1 (6/4.142\%) \\
+|   A1=A >  0.5 : LM2 (3/15.306\%)\\
+A2=I >  0.5 :  \\
+|   A3=R <= 0.5 : LM3 (2/6.704\%) \\
+|   A3=R >  0.5 : LM4 (3/12.387\%) \\
