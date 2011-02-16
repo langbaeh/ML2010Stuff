@@ -25,7 +25,7 @@ Iterations       & yeast & vowel & vehicle &  sick & abalone     \\ \hline
 \end{tabular}\\ \\
 
 
-Performance Random Forrests \\
+Performance Random Forests \\
 \begin{tabular}{l|c|c|c|c|c}
 Number of Trees  & yeast & vowel & vehicle &  sick & abalone     \\ \hline
 10               & 57.9  & 96.0  & 77.0    &  98.4 &  22.4       \\ \hline
@@ -34,3 +34,4 @@ Number of Trees  & yeast & vowel & vehicle &  sick & abalone     \\ \hline
 100              & 61.4  & 98.5  & 76.5    &  98.4 &  23.8       \\ 
 \end{tabular}\\ \\
 
+Generell verbessern alle 3 Ensemble Lerner die Performance gegen\"uber dem regulären \emph{J48}. Bei \emph{Bagging} bringt eine erh\"ohte Anzahl der Iteration nur sehr geringe Verbesserungen auf unseren Datensets. Durch \emph{Boosting} kann die Performance um mehrere Prozent steigen, wenn man die Zahl der Iterationen erh\"oht. Bei \emph{Random Forests} h\"angt eine Steigerung der Performance durch eine erh\"ohte Anzahl von Trees stark vom Datensatz ab. 
