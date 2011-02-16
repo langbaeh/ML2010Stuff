@@ -1,17 +1,15 @@
 
-Datensatz: contact lenses, kr-vs-kp
+Datens\"atz: glass (discretize filter), kr-vs-kp
 
-Area under ROC curve
-
-\begin{tabular}{c|c|c|c}
-				Regellerner       & \emph{soft} & \emph{hard} & \emph{none}  \\ \hline
-				\emph{J48 - unpruned} & 0.97 & 0.99 & 0.97  \\ \hline
-				\emph{J48 - pruned}  & 0.97 & 0.99 & 0.97 \\ \hline
-				\emph{ID3}  & 1.00 & 1.00 & 1.00 \\ \hline
+\textbf{Area under ROC curve}
+\begin{tabular}{c|c|c|c|c|c|c}
+				Regellerner       & \emph{bwf} & \emph{bwn} & \emph{vwf}  & \emph{cont} & \emph{table} & \emph{head} \\ \hline
+				\emph{J48 - unpruned}& 0.73 & 0.70 & 0.71 & 0.87 & 0.92 & 0.92 \\ \hline
+				\emph{J48 - pruned}  & 0.77 & 0.73 & 0.73 & 0.86 & 0.87 & 0.84 \\ \hline
+				\emph{ID3}           & 0.62 & 0.70 & 0.59 & 0.81 & 0.77 & 0.88 \\ \hline
 \end{tabular}
 
 Pruning hat nichts gebracht!
-
 
 \begin{tabular}{c|c|c|c}
 				Regellerner       & \emph{won} & \emph{nowin} \\ \hline
@@ -21,29 +19,26 @@ Pruning hat nichts gebracht!
 \end{tabular}
 
 
-Accuracy
-
+\textbf{Accuracy}
 \begin{tabular}{c|c|c}
-				Regellerner       & \emph{contact lenses} & \emph{kr-vs-kp}  \\ \hline
-				\emph{J48 - unpruned}  & 70.83 & 99.41 \\ \hline
-				\emph{J48 - pruned} & 83.33  & 99.44 \\ \hline
-				\emph{ID3}  & 70.83 & 99.69\\ \hline
+				Regellerner       & \emph{glass} & \emph{kr-vs-kp}  \\ \hline
+				\emph{J48 - unpruned}  & 57.94 & 99.41 \\ \hline
+				\emph{J48 - pruned} & 57.94  & 99.44 \\ \hline
+				\emph{ID3}  & 50.47 & 99.69\\ \hline
 \end{tabular}
 
 Gr\"osse der entstandenen B\"aume
 
-contact lenses:
-
+\emph{glass}:
 \begin{tabular}{c|c|c}
 	Regellerner       & \emph{size of the tree} & \emph{number of leaves}  \\ \hline
-	\emph{J48 - unpruned}  & 7 & 4 \\ \hline
-	\emph{J48 - pruned} & 7  & 4 \\ \hline
-	\emph{ID3}  & 14 & 8\\ \hline
+	\emph{J48 - unpruned} & 221  & 199  \\ \hline
+	\emph{J48 - pruned}   & 81   & 73   \\ \hline
+	\emph{ID3}            & 550  & 496  \\ \hline
 \end{tabular}
 
 
-kr-vs-kp:
-
+\emph{kr-vs-kp}:
 \begin{tabular}{c|c|c}
 	Regellerner       & \emph{size of the tree} & \emph{number of leaves}  \\ \hline
 	\emph{J48 - unpruned}  & 82 & 43 \\ \hline
