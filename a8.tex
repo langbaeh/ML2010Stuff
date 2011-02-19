@@ -1,38 +1,65 @@
+%!TEX root = main.tex
 
-numerische attribute entfernt: fnlwgt, education-num
+Der Datensatz \emph{adult} enth\"alt sehr viele Attribute, die stark miteinander korrelieren, wie zum Beispiel \emph{sex} und \emph{marital-status}. Daher haben wir, um spannende Regeln zu finden sehr viele Attribute entfernt, und listen nur die Attribute auf, die wir zum Finden von Regeln verwendet haben.
 
-andere attribute entfernt: marital-status, capital-gain, capital-loss, sex
+\vspace{0.1cm} 
 
-sortiert nach lift: 
+\begin{boxedminipage}{\textwidth}
+\begin{tabular}{rl}
+\emph{Attribute:}  & age, workclass, education, occupation, relationship, \\
+                   & race, hoursperweek, native-country, class \\
+\emph{Sortierung:} &  lift \\
+\end{tabular}
+\vspace{0.3cm}
 
-relationship=Not-in-family 12583 ==> class=<=50K 11307    conf:(0.9) < lift:(1.18)> lev:(0.04) [1734] conv:(2.36)
+$\textbf{relationship} = \textbf{Not-in-family} \Longrightarrow \textbf{class} = \textbf{<=50K} $ (confidence: 0.9 lift: 1.18)
+\end{boxedminipage} \vspace{0.1cm}
+
+\vspace{0.1cm} 
+
+\begin{boxedminipage}{\textwidth}
+\begin{tabular}{rl}
+\emph{Attribute:}  & workclass, education, occupation, race, hoursperweek, class \\
+\emph{Sortierung:} &  confidence \\
+\end{tabular}
+\vspace{0.3cm}
+$\textbf{class} = \textbf{>50K} \Longrightarrow \textbf{race} = \textbf{White}$    (confidence: 0.91)
+\end{boxedminipage} \vspace{0.1cm}
+
+Da etwa 85 \% der Teilnehmer der Studie \textbf{race} = \textbf{white} hatten, wurden sehr viele Regeln der Form $\Longrightarrow$ \textbf{race} = \textbf{white} gefunden. Entfernt man dieses Attribut, findet man noch weitere interessante Regeln.
+
+\vspace{0.1cm} 
+
+\begin{boxedminipage}{\textwidth}
+\begin{tabular}{rl}
+\emph{Attribute:}  & age, education, marital-status, occupation \\
+\emph{Sortierung:} &  confidence \\
+\end{tabular}
+\vspace{0.3cm}
+
+$\textbf{age}= \mathbf{0} \Longrightarrow \textbf{marital-status}= \textbf{Never-married}$    (confidence: 0.85)
+
+$\textbf{age}= \mathbf{3} \Longrightarrow \textbf{marital-status}=\textbf{Married-civ-spouse}$  (  confidence: 0.62)
+\end{boxedminipage} \vspace{0.1cm}
 
 
+Wobei hier \textbf{age} wahrscheinlich nicht f\"ur das tas\"achliche alter steht, sondern f\"ur bestimmte Altersgrenzen. Junge Menschen sind nicht oft verheiratet. Alte M\"anner sind oft verheiratet.
 
-numerische attribute entfernt: fnlwgt, education-num
+\vspace{0.1cm}
 
-andere attribute entfernt: marital-status, capital-gain, capital-loss, sex, age, relationship, native-country
+\begin{boxedminipage}{\textwidth}
+\begin{tabular}{rl}
+\emph{Attribute:}  & marital-status, relationship, class \\
+\emph{Sortierung:} &  confidence \\
+\end{tabular}
+\vspace{0.3cm}
 
-sortiert nach confidence:
+$\textbf{relationship}=\textbf{Own-child} \Longrightarrow \textbf{class} = \textbf{<=50K} $   (confidence: 0.99)
 
-class=>50K 11687 ==> race=White 10607    conf:(0.91)
+$\textbf{class}=\textbf{>50K} \Longrightarrow \textbf{marital-status}=\textbf{Married-civ-spouse}$ (confidence: 0.85)
+\end{boxedminipage} \vspace{0.1cm}
 
-Da 85 \% der Teilnehmer der Studie race = white hatten, wurden sehr viele Regeln der Form ? => race = white gefunden. Entfernt man dieses Attribut, findet man interessantere Regeln.
-
-
-attributes \u"brig: age, education, marital-status, occupation
-
-1. age=0 9627 ==> marital-status=Never-married 8229    conf:(0.85)
-
-2. age=3 8296 ==> marital-status=Married-civ-spouse 5139    conf:(0.62)
-
-
-attributes: marital-status, relationship, class
-
-class=>50K 11687 ==> marital-status=Married-civ-spouse 9984    conf:(0.85)
-
-relationship=Own-child 7581 ==> class=<=50K 7470    conf:(0.99)
-
+Erwachsene die ein eigenes Kind haben, verdienen eher wenig. Erwachsene die viel verdienen sind oft verheiratete M\"anner.
 
 
 
