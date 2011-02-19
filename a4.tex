@@ -1,51 +1,57 @@
 
 Datens\"atze: glass (discretize filter), kr-vs-kp
 
-\textbf{Area under ROC curve}
-
+\textbf{Fl\"ache unter ROC Kurve}
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c|c|c|c|c|c}
 				Regellerner       & \emph{bwf} & \emph{bwn} & \emph{vwf}  & \emph{cont} & \emph{table} & \emph{head} \\ \hline
 				\emph{J48 - unpruned}& 0.73 & 0.70 & 0.71 & 0.87 & 0.92 & 0.92 \\ \hline
 				\emph{J48 - pruned}  & 0.77 & 0.73 & 0.73 & 0.86 & 0.87 & 0.84 \\ \hline
-				\emph{ID3}           & 0.62 & 0.70 & 0.59 & 0.81 & 0.77 & 0.88 \\ \hline
+				\emph{ID3}           & 0.62 & 0.70 & 0.59 & 0.81 & 0.77 & 0.88 
 \end{tabular}
+\caption{glass}
 
-Pruning hat nichts gebracht!
-
-\begin{tabular}{c|c|c|c}
+\begin{tabular}{c|c|c}
 				Regellerner       & \emph{won} & \emph{nowin} \\ \hline
 				\emph{J48 - unpruned} & 1.0 & 1.0  \\ \hline
 				\emph{J48 - pruned}  & 1.0 & 1.0  \\ \hline
-				\emph{ID3}  & 1.0 & 1.0 \\ \hline
+				\emph{ID3}  & 1.0 & 1.0 
 \end{tabular}
-
+\caption{kr-vs-kp}
+\end{table}
 
 \textbf{Accuracy}
-
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c|c}
 				Regellerner       & \emph{glass} & \emph{kr-vs-kp}  \\ \hline
 				\emph{J48 - unpruned}  & 57.94 & 99.41 \\ \hline
 				\emph{J48 - pruned} & 57.94  & 99.44 \\ \hline
-				\emph{ID3}  & 50.47 & 99.69\\ \hline
+				\emph{ID3}  & 50.47 & 99.69
 \end{tabular}
+\end{table}
 
 \textbf{Gr\"osse der entstandenen B\"aume}
 
-\emph{glass}:
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c|c}
 	Regellerner       & \emph{size of the tree} & \emph{number of leaves}  \\ \hline
 	\emph{J48 - unpruned} & 221  & 199  \\ \hline
 	\emph{J48 - pruned}   & 81   & 73   \\ \hline
-	\emph{ID3}            & 550  & 496  \\ \hline
+	\emph{ID3}            & 550  & 496  
 \end{tabular}
+\caption{glass}
 
-
-\emph{kr-vs-kp}:
 \begin{tabular}{c|c|c}
 	Regellerner       & \emph{size of the tree} & \emph{number of leaves}  \\ \hline
 	\emph{J48 - unpruned}  & 82 & 43 \\ \hline
 	\emph{J48 - pruned} & 59  & 31 \\ \hline
-	\emph{ID3}  & 95 & 49\\ \hline
+	\emph{ID3}  & 95 & 49
 \end{tabular}
+\caption{kr-vs-kp}
+\end{table}
+
 
 Betrachtet man die Fl\"ache unter der ROC Kurve so hat \emph{ID3} im Allgemeinen schlechtere Werte. Dies spiegelt sich auch in der Accuracy wieder. Au\ss erdem erzeugt \emph{ID3} immer einen gr\"o\ss eren Baum. Man kann also deutlich erkennen, das ein gro\ss er Baum schlecht veralgemeinert und somit auch schlechtere Performancewerte erzielt. Das Pruning von \emph{J48} erzeugt einen kleineren Baum, der allerdings nicht deutlich bessere Performance liefert. Dieser Effekt ist dabei wahrscheinlich stark abh\"angig von den von uns gew\"ahlten Datens\"atze.

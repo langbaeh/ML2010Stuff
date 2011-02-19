@@ -1,36 +1,46 @@
 \subsubsection*{a}
+\textbf{Accuracy}
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c|c|c|c|c}
 				Datensatz         & 1x5  & 1x10 & 1x20 & LOO  & Trainingsmenge   \\ \hline
 				\emph{glass}      & 67.3 & 61.8 & 60.7 & 61.7 & 85.98   \\ \hline
 				\emph{iris}       & 92.0 & 88.0 & 96.0 & 93.3 & 96.0    \\ \hline
 				\emph{audiology}  & 67.3 & 66.4 & 69.9 & 69.9 & 76.1    \\ \hline
 				\emph{ionosphere} & 89.2 & 92.0 & 90.0 & 89.2 & 100   \\ \hline
-				\emph{yeast}      & 56.5 & 57.7 & 57.7 & 59.4 & 67.8   \\ \hline
+				\emph{yeast}      & 56.5 & 57.7 & 57.7 & 59.4 & 67.8   \\ 
 \end{tabular}
+\end{table}
 
 Die gesch\"atzte Genauigkeit wird auf der gesamten Trainingsmenge immer h\"oher sein als auf Echtdaten, da die Regeln speziell f\"ur diese Daten trainiert wurden. In der Praxis sollte man daher Cross-Validation verwenden um sinnvolle Genauigkeiten zu erhalten. Die Qualit\"at der Absch\"atzung wird besser, je mehr Folds man f\"ur die Cross-Validation verwendet. Am genauesten sollte die Leave-One-Out Methode sein, sie ben\"otigt jedoch auch die meiste Zeit. In der Praxis sollte man darauf R\"ucksicht nehmen.
 
 \subsubsection*{b}
-\begin{tabular}{c|c|c|c|c|c}
+\begin{table}[htb]
+	\centering
+\begin{tabular}{c|c}
 				Datensatz         & 10x10    \\ \hline
 				\emph{glass}      & 67.3     \\ \hline
 				\emph{iris}       & 92.0     \\ \hline
 				\emph{audiology}  & 67.3     \\ \hline
 				\emph{ionosphere} & 89.2     \\ \hline
-				\emph{yeast}      & 56.5     \\ \hline
+				\emph{yeast}      & 56.5     \\ 
 \end{tabular}
+\end{table}
 
 Die \"Anderung des seeds hat keine signifikante Ver\"anderung der Absch\"atzung bewirkt. Im Allgemeinen sollte die Auswahl der Random-Seeds auch keinen Einfluss auf die Absch\"atzung haben.
 
 
 \subsubsection*{c}
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c}
 				Datensatz         & Validierungsmenge    \\ \hline
 				\emph{glass}      & 73.1     \\ \hline
 				\emph{iris}       & 93.3     \\ \hline
 				\emph{audiology}  & 67.3   \\ \hline
 				\emph{ionosphere} & 84.6   \\ \hline
-				\emph{yeast}      & 56.1 \\ \hline
+				\emph{yeast}      & 56.1 \\ 
 \end{tabular}
+\end{table}
 
 Die Genauigkeit der Evaluierungsmethoden h\"angt stark vom entsprechenden Datensatz ab. Im Allgemeinen konnte keine Methode immer gute Absch\"atzungen liefern.

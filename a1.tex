@@ -1,30 +1,41 @@
 
 F\"ur diese Aufgabe benutzen wir die Datens\"atze \emph{glass, iris} und \emph{splice}.
-\emph{glass} wurde f\"ur den Prism-Learner mit dem Discretize-Filter verwendet (\emph{java weka.filters.supervised.attribute.Discretize -i glass.arff -o glass\_nom.arff -R 1,2,3,4,5,6,7,8,9 -c last}).\\
+\emph{glass} wurde f\"ur den Prism-Learner mit dem Discretize-Filter verwendet (\emph{java weka.filters.supervised.attribute.Discretize -i glass.arff -o glass\_nom.arff -R 1,2,3,4,5,6,7,8,9 -c last}).
 
-Anzahl der Regeln \\
+\textbf{Anzahl der Regeln}
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c|c|c}
 	             & glass & iris & splice \\ \hline
 Conjunctive Rule &   1   &  1   &   1    \\ \hline
 JRip             &   8   &  4   &   14   \\ \hline
 Prism	         &   63  &  16   &  3176    \\
-\end{tabular}\\ \\
+\end{tabular}
+\end{table}
 
-Gesamtanzahl der Bedingungen \\
+
+\textbf{Gesamtanzahl der Bedingungen}
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c|c|c}
 	             & glass & iris & splice \\ \hline
 Conjunctive Rule &   2   &  1   &   1    \\ \hline
 JRip             &  18   &  3   &   55   \\ \hline
 Prism	         &  385  & 51   &   3176   \\
-\end{tabular}\\ \\
+\end{tabular}
+\end{table}
 
-Anzahl der vorhergesagten Klassen \\
+
+\textbf{Anzahl der vorhergesagten Klassen}
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c|c|c}
 	             & glass & iris & splice \\ \hline
 Conjunctive Rule &   1   &  1   &   1    \\ \hline
 JRip             &   6   &  3   &   3    \\ \hline
 Prism	         &   6   &  3   &   3    \\
-\end{tabular}\\ \\
+\end{tabular}
+\end{table}
 
 \emph{Prism} erzeugt bei allen Datens\"atzen die meisten Regeln und Bedingungen. \emph{Conjunctive Rule} erzeugt fast immer nur eine Regel mit einer Bedingung.
 
@@ -33,4 +44,4 @@ Eine Default Rule existiert nur bei JRip. Dort wird als Defaultklasse \"ublicher
 Der Datensatz \emph{iris} l\"asst sich am einfachsten lernen, da man hier alle Algorithmen besonders wenig Regeln und besonders wenig Bedingungen ben\"otigen.
 
 Auf dem Datensatz \emph{Contact Lenses} erzeugt \emph{JRip} 3 Regeln, wo bei einer davon der Default-Rule entspricht. \emph{Prism} erzeugt hingehen 9 Regeln. Die Anzahl der Bedingungen ist ebenfalls h\"oher f\"ur die von \emph{Prism} gefundenen Regeln. Daraus l\"asst sich folgern, dass \emph{JRip} vermutlich besser veralgemeinert. 
-Dieser Unterschied entsteht hier vorallem durch dir verschiedenen Performance Ma\ss e. Da \emph{Prism} Precision verwendet, wird lediglich auf eine hohe Anzahl von korrekt klassifizierten Beispielen optimiert. Deshalb tendiert der Algorithmus eher zum Overfitting und erzeugt viele Regeln mit vielen Bedingungen. \emph{JRip} hingegen zieht durch das Gain Ma\ss auch die Anzahl der Regeln in Betracht und versucht dadurch nur wichtige Regeln zu lernen um Overfitting zu vermeiden.
+Dieser Unterschied entsteht hier vorallem durch dir verschiedenen Performance Ma\ss e. Da \emph{Prism} Precision verwendet, wird lediglich auf eine hohe Anzahl von korrekt klassifizierten Beispielen optimiert. Deshalb tendiert der Algorithmus eher zum Overfitting und erzeugt viele Regeln mit vielen Bedingungen. \emph{JRip} hingegen zieht durch das Gain Ma\ss\  auch die Anzahl der Regeln in Betracht und versucht dadurch nur wichtige Regeln zu lernen um Overfitting zu vermeiden.

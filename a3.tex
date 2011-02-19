@@ -1,12 +1,16 @@
 Datensatz: glass
+%TODO: CAPTIONS
 
-Die Fl\"ache unter ROC:
-
+\textbf{Fl\"ache unter ROC Kurve}
+\begin{table}[htb]
+	\centering
 \begin{tabular}{c|c|c|c}
 				Regellerner       & \emph{build wind float} & \emph{containers} & \emph{tableware}  \\ \hline
 				\emph{J48}			& 0.81 & 0.87 & 0.93  \\ \hline
 				\emph{Naive Bayes}  & 0.71 & 0.84 & 0.98  
 \end{tabular}
+\end{table}
+
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[height=3in]{pics/a3/ROC_glass_build_wind_float.pdf}
@@ -30,31 +34,3 @@ Die Fl\"ache unter ROC:
 
 Bis auf wenige Klassen hat \emph{J48} eine h\"ohere Fl\"ache unter der ROC Kurve.
 Anhand der ROC Kurven kann man also sagen, dass f\"ur eine uniforme Klassenverteilung und f\"ur eine Verteilung mit mehr negativen als positiven Beispielen \emph{J48} bessere Ergebnisse liefert. Bei Besonders vielen positiven Beispielen k\"onnte der Naive Bayes Klassifizierer bessere Ergebnisse erzielen.
-
-
-% Datensatz: iris
-% 
-% Die Fläche unter ROC:
-% 
-% 
-% \begin{tabular}{c|c|c}
-% 				Regellerner       & \emph{versicolor} & \emph{virginica}  \\ \hline
-% 				\emph{J48}			& 0.952 & 0.961  \\ \hline
-% 				\emph{Naive Bayes}  & 0.992 & 0.992  
-% \end{tabular}
-% 
-% \begin{figure}[htbp]
-% 	\centering
-% 		\includegraphics[height=3in]{pics/a3/ROC_iris_versi.pdf}
-% 	\caption{caption}
-% 	\label{fig:pics_a3_ROC_iris_versi}
-% \end{figure}
-% 
-% 
-% \begin{figure}[htbp]
-% 	\centering
-% 		\includegraphics[height=3in]{pics/a3/ROC_iris_virgi.pdf}
-% 	\caption{caption}
-% 	\label{fig:pics_a3_ROC_iris_virgi}
-% \end{figure}
-% 
